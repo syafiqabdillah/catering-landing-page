@@ -8,31 +8,31 @@ const MenuWrapper = styled.div`
   max-width: 500px;
   flex: 2;
   display: flex;
+  justify-content: center;
   align-items: center;
 `
 
 const MenuList = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  flex-wrap: wrap;
+  justify-items: center;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const MenuItemWrapper = styled.div`
   background-color: var(--maroon);
-  min-height: 200px;
-  width: 200px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   padding: 20px;
-
-  @media (max-width: 1000px) {
-    width: 170px;
-  }
 `
 
 const Heading = styled.h3`
